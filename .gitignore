@@ -1,6 +1,10 @@
+/*
+
+!.bash*
+!.vimrc
+!setup.sh
+
 .bash_history
-bash_history
-.bashhistory
-bashhistory
-backup
-*.swp
+.bash_profile.pysave
+.bash_sessions
+.bash_work

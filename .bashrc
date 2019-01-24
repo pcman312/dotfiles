@@ -59,21 +59,17 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     export debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-_dotfiles=~/.dotfiles
+#_dotfiles=~/.dotfiles
 
 _files=(
-	$_dotfiles/bash_aliases
-    $_dotfiles/bash_functions
-    $_dotfiles/bash_vars
-#    $_dotfiles/bash_old_pwd
+	~/.bash_aliases
+	~/.bash_functions
+	~/.bash_vars
+	~/.bash_work/.bash_profile
 #    /etc/bash_completion.d/git # Git bash completion
 
 	# MACOS
 	$(brew --prefix)/etc/bash_completion # Brew auto-complete
-
-	~/.bash_work/bash_aliases
-	~/.bash_work/bash_functions
-	~/.bash_work/bash_vars
 )
 
 for file in "${_files[@]}"; do
